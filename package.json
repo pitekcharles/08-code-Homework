@@ -1,0 +1,23 @@
+{
+  "name": "08-code-homework",
+  "version": "1.0.0",
+  "description": "App to automatically generate pdf developer cards from a github profile",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pitekcharles/08-code-Homework.git"
+  },
+  "author": "Charles Pitek",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/pitekcharles/08-code-Homework/issues"
+  },
+  "homepage": "https://github.com/pitekcharles/08-code-Homework#readme",
+  "dependencies": {
+    "axios": "^0.19.1",
+    "inquirer": "^7.0.3"
+  }
+}
