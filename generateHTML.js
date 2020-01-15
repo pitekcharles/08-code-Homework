@@ -173,7 +173,49 @@ function generateHTML(data) {
           </style>
       </head>
       <body>
-        
-      </body>
-    </html>`
+        <div class="wrapper">
+          <div class="main">
+            <div class="photo-header">
+              <img src="https://avatars1.githubusercontent.com/u/57869258?v=4">
+              <h1>Hi!</h1>
+              <h2>My name is ${name}!</h2>
+              <h4>Currently @ ${Currentposition}</h4 >
+              <h5 class="links-nav">location, github, blog</h5>
+            </div >
+          </div >
+        </div >
+        <div class="container">
+          <h2>${bio}</h2>
+          <div class="row">
+            <div class="col">
+              <div class="card">
+                <h2>Public Repositories</h2>
+                <h3>${public_repos}</h3>
+              </div>
+            </div>
+            <div class="col">
+              <div class="card">
+                <h2>Followers</h2>
+                <h3>${followers}</h3>
+              </div>
+           </div>
+          </div>
+          <div class="row">
+            <div class="col">
+              <div class="card">
+                <h2>GitHub Stars</h2>
+                <h3>${stuff}</h3>
+              </div>
+            </div>
+            <div class="col">
+              <div class="card">
+                <h2>Following</h2>
+                <h3>${following}</h3>
+              </div>
+            </div>
+          </div>
+        </div>
+        </div >
+      </body >
+    </html > `
 }

@@ -28,6 +28,7 @@ inquirer.prompt([
     axios.get(queryUrl).then(function(response){
         // console.log(response.data);
         const {avatar_url, name, location: locCurrent, url, bio, public_repos, followers, following} = response.data;
+        console.log(avatar_url);
     })
 })
 
