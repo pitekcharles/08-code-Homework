@@ -1,31 +1,4 @@
-const colors = {
-  green: {
-    wrapperBackground: "#E6E1C3",
-    headerBackground: "#C1C72C",
-    headerColor: "black",
-    photoBorderColor: "#black"
-  },
-  blue: {
-    wrapperBackground: "#5F64D3",
-    headerBackground: "#26175A",
-    headerColor: "white",
-    photoBorderColor: "#73448C"
-  },
-  pink: {
-    wrapperBackground: "#879CDF",
-    headerBackground: "#FF8374",
-    headerColor: "white",
-    photoBorderColor: "#FEE24C"
-  },
-  red: {
-    wrapperBackground: "#DE9967",
-    headerBackground: "#870603",
-    headerColor: "white",
-    photoBorderColor: "white"
-  }
-};
-
-function generateHTML(data) {
+function generateHTML(data, color) {
   return `<!DOCTYPE html>
     <html lang="en">
       <head>
@@ -176,7 +149,7 @@ function generateHTML(data) {
         <div class="wrapper">
           <div class="main">
             <div class="photo-header">
-              <img src="https://avatars1.githubusercontent.com/u/57869258?v=4">
+              <img src="${avatar_url}">
               <h1>Hi!</h1>
               <h2>My name is ${name}!</h2>
               <h4>Currently @ ${Currentposition}</h4 >
@@ -219,3 +192,7 @@ function generateHTML(data) {
       </body >
     </html > `
 }
+
+module.exports = {
+  generateHTML: generateHTML
+};
