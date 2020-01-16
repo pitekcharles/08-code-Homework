@@ -18,3 +18,8 @@ Once you select the user profile and the color the pdf of the developer card wil
 
 gif of app in action:
 ![Gif of app in action](./assets/use.gif)
+
+## Technologies
+This application uses javascript, node.js, inquirer, axios, and html-pdf.
+
+### This is a Charles Pitek Project
