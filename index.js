@@ -2,6 +2,7 @@ const fs = require("fs");
 const axios = require("axios");
 const inquirer = require("inquirer");
 const generateHTML = require("./generateHTML.js")
+const pdf = require('html-pdf');
 
 let color;
 
@@ -56,10 +57,6 @@ inquirer.prompt([
     const queryUrl = `https://api.github.com/users/${username}`;
 
     axios.get(queryUrl).then(function(response){
-        // console.log(response.data);
-        // const {avatar_url, name, location: locCurrent, url, bio, public_repos, followers, following} = response.data;
-        // console.log(avatar_url);
-        console.log(colorFav);
         switch (colorFav) {
             case "red":
                 color = colors.red;
@@ -73,7 +70,13 @@ inquirer.prompt([
             case "green":
                 color = colors.green;
         }
-        generateHTML.generateHTML(response.data, color);
+        const testing = generateHTML.generateHTML(response.data, color);
+        const options = { format: 'Letter' };
+        pdf.create(testing).toFile(`${username}.pdf`,function(error, result){
+            if (error) return console.log(error);
+            console.log(`Profile created at ${username}.pdf`);
+        })
+
     })
 })
 
