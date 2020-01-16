@@ -57,7 +57,7 @@ inquirer.prompt([
 
     axios.get(queryUrl).then(function(response){
         // console.log(response.data);
-        const {avatar_url, name, location: locCurrent, url, bio, public_repos, followers, following} = response.data;
+        // const {avatar_url, name, location: locCurrent, url, bio, public_repos, followers, following} = response.data;
         // console.log(avatar_url);
         console.log(colorFav);
         switch (colorFav) {
@@ -73,15 +73,10 @@ inquirer.prompt([
             case "green":
                 color = colors.green;
         }
+        generateHTML.generateHTML(response.data, color);
     })
 })
 
-
-
-
-const questions = [
-  
-];
 
 function writeToFile(fileName, data) {
  

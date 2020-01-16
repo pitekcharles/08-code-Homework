@@ -25,7 +25,7 @@ function generateHTML(data, color) {
             height: 100%;
             }
             .wrapper {
-            background-color: ${colors[data.color].wrapperBackground};
+            background-color: ${color.wrapperBackground};
             padding-top: 100px;
             }
             body {
@@ -67,8 +67,8 @@ function generateHTML(data, color) {
             display: flex;
             justify-content: center;
             flex-wrap: wrap;
-            background-color: ${colors[data.color].headerBackground};
-            color: ${colors[data.color].headerColor};
+            background-color: ${color.headerBackground};
+            color: ${color.headerColor};
             padding: 10px;
             width: 95%;
             border-radius: 6px;
@@ -79,7 +79,7 @@ function generateHTML(data, color) {
             border-radius: 50%;
             object-fit: cover;
             margin-top: -75px;
-            border: 6px solid ${colors[data.color].photoBorderColor};
+            border: 6px solid ${color.photoBorderColor};
             box-shadow: rgba(0, 0, 0, 0.3) 4px 1px 20px 4px;
             }
             .photo-header h1, .photo-header h2 {
@@ -122,8 +122,8 @@ function generateHTML(data, color) {
             .card {
               padding: 20px;
               border-radius: 6px;
-              background-color: ${colors[data.color].headerBackground};
-              color: ${colors[data.color].headerColor};
+              background-color: ${color.headerBackground};
+              color: ${color.headerColor};
               margin: 20px;
             }
             
@@ -149,27 +149,27 @@ function generateHTML(data, color) {
         <div class="wrapper">
           <div class="main">
             <div class="photo-header">
-              <img src="${avatar_url}">
+              <img src="${data.avatar_url}">
               <h1>Hi!</h1>
-              <h2>My name is ${name}!</h2>
-              <h4>Currently @ ${Currentposition}</h4 >
+              <h2>My name is ${data.name}!</h2>
+              <h4>Currently @ ${data.Currentposition}</h4 >
               <h5 class="links-nav">location, github, blog</h5>
             </div >
           </div >
         </div >
         <div class="container">
-          <h2>${bio}</h2>
+          <h2>${data.bio}</h2>
           <div class="row">
             <div class="col">
               <div class="card">
                 <h2>Public Repositories</h2>
-                <h3>${public_repos}</h3>
+                <h3>${data.public_repos}</h3>
               </div>
             </div>
             <div class="col">
               <div class="card">
                 <h2>Followers</h2>
-                <h3>${followers}</h3>
+                <h3>${data.followers}</h3>
               </div>
            </div>
           </div>
@@ -177,13 +177,13 @@ function generateHTML(data, color) {
             <div class="col">
               <div class="card">
                 <h2>GitHub Stars</h2>
-                <h3>${stuff}</h3>
+                <h3>${data.stuff}</h3>
               </div>
             </div>
             <div class="col">
               <div class="card">
                 <h2>Following</h2>
-                <h3>${following}</h3>
+                <h3>${data.following}</h3>
               </div>
             </div>
           </div>
